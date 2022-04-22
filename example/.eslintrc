@@ -1,0 +1,5 @@
+{
+    "extends": [
+        "@wallwhite/eslint-config-react-ts"
+    ]
+}

@@ -1,5 +1,5 @@
 {
-  "name": "@wallwhite/react-eslint-config-ts",
+  "name": "@wallwhite/eslint-config-react-ts",
   "version": "0.1.3",
   "description": "Personal eslint config for react apps with ts",
   "main": "index.js",
@@ -14,9 +14,10 @@
     "index.js"
   ],
   "devDependencies": {
+    "@typescript-eslint/parser": "^5.20.0",
     "eslint": "^7.11.0",
-    "typescript": "^4.0.0",
-    "prettier": "^2.2.0"
+    "prettier": "^2.2.0",
+    "typescript": "^4.0.0"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.16.0",
@@ -30,8 +31,9 @@
     "prettier-eslint": "^11.0.0"
   },
   "peerDependencies": {
+    "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^7.0.0",
-    "typescript": "^4.0.0",
-    "prettier": "^2.2.0"
+    "prettier": "^2.2.0",
+    "typescript": "^4.0.0"
   }
 }
