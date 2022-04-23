@@ -2,18 +2,30 @@
 
 There is an eslint config which extends airbnb, ts and other useful configurations.
 
-## Usage 
+## Install 
 
-- npm
+- npm:
 
 ```
 npm install @wallwhite/react-eslint-config-ts --save-dev
 ```
 
-- yarn 
+- yarn:
 
 ```
 yarn add @wallwhite/react-eslint-config-ts --dev
+```
+
+## Usage 
+
+Add to your `.eslintrc`:
+
+```
+{
+    "extends": [
+        "@wallwhite/eslint-config-react-ts"
+    ]
+}
 ```
 
 ## VS code auto-fix 
