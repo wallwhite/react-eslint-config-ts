@@ -106,10 +106,7 @@ module.exports = {
                 "next": "export"
             }
         ],
-        "react/state-in-constructor": [
-            0,
-            "always"
-        ],
+        "react/state-in-constructor": [0, "always"],
         "react/static-property-placement": 0,
         "jsx-a11y/click-events-have-key-events": 0,
         "jsx-a11y/no-static-element-interactions": 0,
