@@ -1,19 +1,32 @@
 # React eslint config
 
-There is an eslint config which extends airbnb, ts and other useful configurations.
+This is an eslint config which extends airbnb, ts and other useful configurations.
+
+Use the config and make your projects better and readable.
+
+This config included next rules: 
+- airbnb
+- eslint (recommended)
+- eslint typescript (recommended)
+- react (recommended)
+- react hooks (recommended)
+- jsx a11y (recommended)
+- prettier (recommended)
+- import rules (recommended)
+
 
 ## Install 
 
 - npm:
 
 ```
-npm install @wallwhite/react-eslint-config-ts --save-dev
+npm install @wallwhite/eslint-config-react-ts --save-dev
 ```
 
 - yarn:
 
 ```
-yarn add @wallwhite/react-eslint-config-ts --dev
+yarn add @wallwhite/eslint-config-react-ts --dev
 ```
 
 ## Usage 
