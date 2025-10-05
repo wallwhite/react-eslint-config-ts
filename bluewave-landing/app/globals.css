@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  /* Border radius tokens */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+
+  /* Font families */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Core dark theme colors */
+  --color-background: #0a0a0f;
+  --color-foreground: #fafafa;
+
+  /* Card and elevated surfaces */
+  --color-card: #14141a;
+  --color-card-foreground: #fafafa;
+
+  /* Popover and floating elements */
+  --color-popover: #1a1a24;
+  --color-popover-foreground: #fafafa;
+
+  /* Primary blue accent */
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary surfaces */
+  --color-secondary: #1e1e2e;
+  --color-secondary-foreground: #e4e4e7;
+
+  /* Muted backgrounds and text */
+  --color-muted: #1e1e2e;
+  --color-muted-foreground: #a1a1aa;
+
+  /* Accent color (darker blue) */
+  --color-accent: #2563eb;
+  --color-accent-foreground: #ffffff;
+
+  /* Destructive/error */
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+
+  /* Borders and inputs */
+  --color-border: #27272a;
+  --color-input: #27272a;
+  --color-ring: #3b82f6;
+
+  /* Chart colors - vibrant and distinct */
+  --color-chart-1: #3b82f6;
+  --color-chart-2: #10b981;
+  --color-chart-3: #f59e0b;
+  --color-chart-4: #8b5cf6;
+  --color-chart-5: #ec4899;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Improved scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-800 rounded-md;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-700;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-primary/20 text-primary-foreground;
+  }
+}
+
+@layer utilities {
+  /* Gradient utilities */
+  .gradient-radial {
+    background: radial-gradient(circle at center, var(--tw-gradient-stops));
+  }
+
+  .gradient-conic {
+    background: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-card/50 backdrop-blur-xl border border-border/50;
+  }
+
+  /* Subtle glow effect */
+  .glow {
+    box-shadow: 0 0 20px -5px rgba(59, 130, 246, 0.3);
+  }
+}

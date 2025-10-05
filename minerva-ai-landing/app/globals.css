@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color tokens */
+  --color-background: 240 10% 3.9%;
+  --color-foreground: 240 5% 96%;
+  --color-card: 240 10% 7%;
+  --color-card-foreground: 240 5% 96%;
+  --color-popover: 240 10% 7%;
+  --color-popover-foreground: 240 5% 96%;
+  --color-primary: 240 5.9% 10%;
+  --color-primary-foreground: 240 5% 96%;
+  --color-secondary: 240 3.7% 15.9%;
+  --color-secondary-foreground: 240 5% 96%;
+  --color-muted: 240 3.7% 15.9%;
+  --color-muted-foreground: 240 5% 64.9%;
+  --color-accent: 240 3.7% 15.9%;
+  --color-accent-foreground: 240 5% 96%;
+  --color-destructive: 0 62.8% 30.6%;
+  --color-destructive-foreground: 240 5% 96%;
+  --color-border: 240 3.7% 15.9%;
+  --color-input: 240 3.7% 15.9%;
+  --color-ring: 240 4.9% 83.9%;
+
+  /* Border radius */
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+
+  /* Keyframes for accordion */
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--color-border));
+  }
+
+  body {
+    background-color: hsl(var(--color-background));
+    color: hsl(var(--color-foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+}
